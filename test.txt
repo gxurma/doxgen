@@ -1,0 +1,95 @@
+Safi / Moris Engineering conference: Minutes of Meeting
+=======================================================
+Martin Gyurkó <martin.gyurko@ge.com>
+v1.0, 2017.03.16: First
+:toc:
+:toclevels: 3
+
+This is a minutes of meeting of the SAFI / MORIS Engineering conference, held by phone and webex.
+
+Attendees
+---------
+
+* Hoerbiger
+- [x] Henric Söderberg
+* GE Jenbacher
+- [x] Martin Gyurkó
+- [x] Kraus Markus
+* GRC Bangalore
+- [x] Sharma Shashank
+- [ ] Khartikk R.
+- [ ] Hari Ramanathan
+- [ ] Prashant Srinivasan
+* GRC München
+- [ ] Igor Gomez-Ortiz
+
+Goal of this document
+---------------------
+
+Nézz <<Todo, ide>>
+
+alcím
+~~~~~
+
+még alccímebb
+^^^^^^^^^^^^^
+
+nagyon alul
+
+
+valami
+------
+
+To define a template structure of a pdf document used by me.
+To define a template structure of a pdf document used by me.
+
+To define a template structure of a pdf document used by me.
+
+
+Első
+----
+
+.Ez egy táblázat
+[options="header, footer"]
+|==================
+|Próba		| Próba 2
+|1234		| qwers
+|1234		| qwers
+|1234		| qwers
+|1234		| qwers
+|1234		| qwers
+|1234		| qwers
+|1234		| qwers
+|1234		| qwers
+|==================
+	
+Todo
+----
+
+Ezeket kell csinálni:
+
+. do something -> @Henric
+. Do something else => @Shashank
+.. Helpers <- @Kartikk
+
+NOTE: Itt ez egy <==> veszély
+
+	valami prózai chapter
+	ez is prózai
+	* lista <1>
+	* liste <2>
+	** liste <3>
+	** liste <2>
+	* liste <4>
+
+<1> qwerqet
+<2> asdagasd 
+<3> asssd sd sd sdf 
+<4> asdf asdf asdf asdf 
+
+* qwerqet
+** asdf yxc 
+** yxc yxx
+*** yxccsws ccc sc 
+*** yxccccccsws ccc sc 
+* íyxc

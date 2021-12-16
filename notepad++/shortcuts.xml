@@ -1,0 +1,375 @@
+<NotepadPlus>
+    <InternalCommands />
+    <Macros>
+        <Macro name="Trim Trailing and save" Ctrl="no" Alt="yes" Shift="yes" Key="83">
+            <Action type="2" message="0" wParam="42024" lParam="0" sParam="" />
+            <Action type="2" message="0" wParam="41006" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="point on beginning" Ctrl="yes" Alt="no" Shift="no" Key="116">
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2453" wParam="0" lParam="0" sParam="" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="*" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="[" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="]" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="done" Ctrl="yes" Alt="no" Shift="no" Key="117">
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2453" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2180" wParam="0" lParam="0" sParam="" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="*" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2300" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="never do point" Ctrl="yes" Alt="no" Shift="no" Key="118">
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2453" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2180" wParam="0" lParam="0" sParam="" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="x" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2300" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="empty point" Ctrl="yes" Alt="no" Shift="no" Key="119">
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2453" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2180" wParam="0" lParam="0" sParam="" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2300" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="underline~" Ctrl="yes" Alt="no" Shift="yes" Key="118">
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="~" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="~" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2302" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2300" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2315" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2180" wParam="0" lParam="0" sParam="" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+        </Macro>
+        <Macro name="underline^" Ctrl="yes" Alt="no" Shift="yes" Key="119">
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="^" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="^" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2302" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2300" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2315" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2180" wParam="0" lParam="0" sParam="" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+        </Macro>
+        <Macro name="underline-" Ctrl="yes" Alt="no" Shift="yes" Key="117">
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="-" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="-" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="-" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="-" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2302" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2300" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2315" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2180" wParam="0" lParam="0" sParam="" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+        </Macro>
+        <Macro name="underline=" Ctrl="yes" Alt="no" Shift="yes" Key="116">
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="=" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="=" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="=" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="=" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2332" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2469" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2302" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2301" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2302" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2300" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2315" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2180" wParam="0" lParam="0" sParam="" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+        </Macro>
+        <Macro name="image line" Ctrl="yes" Alt="no" Shift="yes" Key="73">
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="i" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="m" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="a" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="g" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="e" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="[" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="i" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="l" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="e" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="=" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam='&quot;' />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam='&quot;' />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="]" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="Author" Ctrl="yes" Alt="yes" Shift="yes" Key="116">
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="M" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="a" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="r" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="i" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="n" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="G" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="y" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="u" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="r" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="k" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x00F3;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&lt;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="m" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="a" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="r" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="i" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="n" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="." />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="g" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="y" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="u" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="r" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="k" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="@" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="i" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="n" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="n" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="i" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="." />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="c" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="m" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&gt;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="v" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="1" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="." />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="0" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="," />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="{" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="d" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="c" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="d" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="a" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="e" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="}" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="v" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="a" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="l" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="a" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="m" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="i" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="c" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="c" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="l" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="e" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="v" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="e" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="l" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="s" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="3" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="i" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="c" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="n" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="s" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=": " />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="f" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="n" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="d" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="c" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="y" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="p" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="e" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="b" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="k" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="c" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="h" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="a" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="p" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="e" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="r" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="-" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="l" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="a" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="b" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="e" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="l" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="a" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="b" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="l" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="e" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="-" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="s" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="r" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="i" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="p" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="e" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="s" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="d" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="d" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+        </Macro>
+    </Macros>
+    <UserDefinedCommands>
+        <Command name="Launch in Firefox" Ctrl="yes" Alt="yes" Shift="yes" Key="88">firefox &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Launch in IE" Ctrl="yes" Alt="yes" Shift="yes" Key="73">iexplore &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Launch in Chrome" Ctrl="yes" Alt="yes" Shift="yes" Key="82">chrome &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Launch in Safari" Ctrl="yes" Alt="yes" Shift="yes" Key="70">safari &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Get php help" Ctrl="no" Alt="yes" Shift="no" Key="112">http://www.php.net/%20$(CURRENT_WORD)</Command>
+        <Command name="Google Search" Ctrl="no" Alt="yes" Shift="no" Key="113">http://www.google.com/search?q=$(CURRENT_WORD)</Command>
+        <Command name="Wikipedia Search" Ctrl="no" Alt="yes" Shift="no" Key="114">http://en.wikipedia.org/wiki/Special:Search?search=$(CURRENT_WORD)</Command>
+        <Command name="Open file" Ctrl="no" Alt="yes" Shift="no" Key="116">$(NPP_DIRECTORY)\notepad++.exe $(CURRENT_WORD)</Command>
+        <Command name="Open in another instance" Ctrl="no" Alt="yes" Shift="no" Key="117">$(NPP_DIRECTORY)\notepad++.exe $(CURRENT_WORD) -nosession -multiInst</Command>
+        <Command name="Send via Outlook" Ctrl="yes" Alt="yes" Shift="yes" Key="79">outlook /a &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="to Latex" Ctrl="no" Alt="yes" Shift="no" Key="89">cmd /c cd /d &quot;$(CURRENT_DIRECTORY)&quot; &amp;&amp; texify --clean --pdf --run-viewer &quot;$(FILE_NAME)&quot;</Command>
+        <Command name="asciidoc to html with icons" Ctrl="no" Alt="yes" Shift="no" Key="83">cmd /c cd /d &quot;$(CURRENT_DIRECTORY)&quot; &amp;&amp; &quot;C:\Python27\python.exe&quot; &quot;C:\Program Files\asciidoc\asciidoc.py&quot; -b html5 -a icons -a toc --theme GEfonts &quot;$(FILE_NAME)&quot; &amp;&amp; &quot;C:\Program Files\Internet Explorer\iexplore.exe&quot; &quot;$(CURRENT_DIRECTORY)\$(NAME_PART).html&quot;</Command>
+        <Command name="run in Python" Ctrl="no" Alt="yes" Shift="no" Key="80">cmd /c cd /d &quot;$(CURRENT_DIRECTORY)&quot; &amp;&amp; &quot;C:\Python34\python.exe&quot; &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="html to pdf with wkhtmltopdf" Ctrl="no" Alt="yes" Shift="no" Key="68">cmd /c cd /d &quot;$(CURRENT_DIRECTORY)&quot; &amp;&amp; &quot;C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe&quot; &quot;$(NAME_PART).html&quot; &quot;$(NAME_PART).pdf&quot; &amp;&amp; &quot;C:\Program Files\Tracker\PDF-XChange Viewer\PDFXCview.exe&quot; &quot;$(NAME_PART).pdf&quot;</Command>
+        <Command name="Asciidoctor-pdf" Ctrl="no" Alt="yes" Shift="no" Key="70">cmd /c cd /d &quot;$(CURRENT_DIRECTORY)&quot; &amp;&amp; asciidoctor-pdf -n -a pdf-style=ge &quot;$(FILE_NAME)&quot; &amp;&amp; &quot;c:\Program Files\Tracker Software\PDF Viewer\PDFXCview.exe&quot; &quot;$(NAME_PART).pdf&quot;</Command>
+    </UserDefinedCommands>
+    <PluginCommands />
+    <ScintillaKeys />
+</NotepadPlus>

@@ -1,0 +1,118 @@
+Doxgen: Document generation toolkit
+===================================
+Martin Gyurkó <martin.gyurko@gyurma.de>
+v1.0, {docdate}: valami
+:toc:
+:toclevels: 3
+:doctype: book
+:chapter-label:
+:table-stripes: odd
+:fullWidth: "scaledwidth=17cm, width=100%"
+:iconsdir: ./Bilder/icons
+:imagesdir: ./Bilder
+:icons: font
+ifdef::backend-docbook5[]
+:icons: image
+endif::[]
+
+Collection of Gyurmas Electronics docx reference template and document generation stuff to make beautiful documents from asciidoc
+
+
+Why
+---
+
+Because making documentation with Word sux.
+And numbering the pictures references or headings or lists is always a pain.
+
+With this toolchain not anymore.
+
+You simply write your documentation like source code.
+
+Render. 
+
+Done. 
+
+You get a beautiful document without even touching the docx. Everything is on its place, just where you wanted it.
+
+
+Tools
+-----
+
+.	Asciidoctor
+.	Asciidoctor-pdf
+.	pandoc
+
+Reference documents
+-------------------
+
+ge-theme.yml::	This is used by the asciidoctor-pdf. You need to install it to the correct position.
+
+ref.docx:: This is the reference document, made from an official Gyurmas Electronics template. It is looking just like the pdf output, but the two are not connected, so if you change something in it, you need to adjust the yml template also.
+
+It has a first page with a big logo, title, subtitle, date, disclaimer. On second page there is a table of contents, and on the 3rd page the content starts.
+
+The reference docx has correctly set header and footer, which contain all the relevant document information you need,
+like address, disclaimers, page numbers, version numbers, author, correctly set title, subtitle, Gyurmas Electronics logo, and file name.
+
+Just have a look at the ref.docx
+
+
+pdf template
+------------
+
+For the usage of direct rendering of a pdf document use the asciidoctor-pdf directly.
+
+It needs to use the ge-theme.yml
+
+Installation
+------------
+
+Install *ruby* from the net. Newest version is the best.
+
+install asciidoctor-pdf via 
+
+ gem install asciidoctor-pdf
+
+
+copy the data in the pdf tools folder to 
+
+ c:\Ruby27-x64\lib\ruby\gems\2.7.0\gems\asciidoctor-pdf-1.5.3\data\fonts\
+
+and 
+
+ c:\Ruby27-x64\lib\ruby\gems\2.7.0\gems\asciidoctor-pdf-1.5.3\data\themes\
+
+Install *pandoc* from the net, newest version. 
+
+
+Usage
+-----
+
+Pictures to be included must be put into the folder "Bilder", so you have all the pics at one location, and can also give the document project to our documentation department.
+In the asciidoc source file you then reference directly to the name of the pictures.
+
+To generate a docx: issue the command
+
+ render.bat filename.txt
+ 
+This takes the asciidoc source, compiles it with the docbook backend to a docbook5 .xml, and then with the usage of the ref.docx 
+pandoc generates the filename.docx.
+
+
+Whats not yet working:
+
+.	cross references in the docx file to pictures. This works in the pdf output when directly generated.
+.	admonition blocks. The docbook source correctly shows the Warning, Note, Caution, Tip admonitions, but pandoc does not use it in  the docx. I have no idea why.
+
+
+To generate a pdf do
+
+ asciidoctor-pdf -a pdf-theme=ge filename.asciidoc
+ 
+and there you get the filename.pdf 
+
+Done. 
+
+Rendered.
+
+Beautiful.
