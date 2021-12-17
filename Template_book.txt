@@ -1,26 +1,13 @@
 Template TXT to pdf: With subtitle
 ==================================
-Martin Gyurkó <martin.gyurko@gyurma.de>
-v1.0, {docdate}: First
+Martin Gyurkó <martin.gyurko@ge.com>
+v2.3, 2012. Oktober 12: valami nagy
 :toc:
-:toc-title: Inhaltsverzeichnis
-:toclevels: 3
-:icons: font
+:toclevel: 3
 :doctype: book
-:chapter-label: Kapitel
-:chapter-refsig: Kapitel
-:section-refsig: Kapitel
-:table-stripes: even
-:table-caption: Tabelle
-:figure-caption: Bild
-:xrefstyle: short
-:imagesdir: Bilder
-
-
 
 Goal of this document
----------------------
-
+=====================
 
 valami
 ------
@@ -32,8 +19,7 @@ To define a template structure of a pdf document used by me.
 
 
 Első
-----
-
+====
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas, quam mollis gravida ullamcorper, quam erat bibendum risus, a sollicitudin nulla neque non mi.
 Etiam quis consequat tortor. Mauris in purus fermentum, vehicula massa et, malesuada lorem. Fusce lorem felis, aliquam nec rhoncus nec, ornare eget ex. Maecenas ut urna nulla.
@@ -59,15 +45,6 @@ Aliquam euismod purus sit amet dui dictum, eget scelerisque risus malesuada. Dui
 tempor mollis lacus. Suspendisse non sodales nisi.
 
 
-TIP: TIP:
-
-CAUTION: CAUTION:
-
-IMPORTANT: IMPORTANT:
-
-NOTE: NOTE:
-
-WARNING: WARNING:
 
 
 Cras elementum quis mi auctor lobortis. Sed vitae varius neque. Nam pretium, massa non rutrum tempus, nisl metus ullamcorper dui, non tristique erat leo ut urna.
@@ -80,7 +57,6 @@ est dolor tristique erat. Vestibulum purus libero, tincidunt accumsan dolor eget
 Vivamus at libero ac est rhoncus molestie. Nulla viverra ligula dui, sollicitudin iaculis ante vehicula a. Suspendisse ac mauris quis dui faucibus euismod sit amet
 sit amet purus. Aenean lacinia mi eu dignissim convallis. Fusce pretium euismod dui, id faucibus lacus elementum vel.
 
-[[bookmark-a]]
 .Ez egy táblázat
 [options="header, footer"]
 |==================
@@ -96,8 +72,8 @@ sit amet purus. Aenean lacinia mi eu dignissim convallis. Fusce pretium euismod 
 |==================
 	
 
-purus fermentum
----------------
+Another
+-------
 
 CAUTION: Itt ez egy veszély
 
@@ -107,68 +83,9 @@ Etiam quis consequat tortor. Mauris in purus fermentum, vehicula massa et, males
 
 NOTE: Itt ez egy veszély
 
-	valami prózai chapter
-	ez is prózai
-	* lista <1>
-	* liste <2>
-	** liste <3>
-	** liste <2>
-	* liste <4>
+ valami prózai chapter
+ ez is prózai
 
-<1> qwerqet
-<2> asdagasd 
-<3> asssd sd sd sdf 
-<4> asdf asdf asdf asdf 
-	
-* liste
-** liste
-** liste
-* liste
-** valami hosszu lista dolog
-	ami többsoros is.
-*** és még több sor
-**** ez ismétlődik?
-** és?
-* Naugye
-** Mégse
-* Vége
-
-
-[square]
-* liste
-* liste
-* liste
-
-
-. liste
-.. liste
-.. liste
-. liste
-.. valami hosszu lista dolog
-	ami többsoros is.
-... és még több sor
-.... ez ismétlődik?
-.. és?
-. Naugye
-.. Mégse
-. Vége
-
-
-
-
-Valami szép:
-
-- [ ] Ez egy Checkmark
-- [x] Ez is
-- [*] Erre mit szólsz
-- [o] Erre mit szólsz
-
-
-[TIP]
-qwe4tqertawert qert qert qertq +
-qert qert qert qergtgadfg wthn asth 
-
- 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas, quam mollis gravida ullamcorper, quam erat bibendum risus, a sollicitudin nulla neque non mi.
 Etiam quis consequat tortor. Mauris in purus fermentum, vehicula massa et, malesuada lorem. Fusce lorem felis, aliquam nec rhoncus nec, ornare eget ex. Maecenas ut urna nulla.
 Sed non convallis libero, vel porta est. Sed varius diam vitae lorem vehicula dictum. Duis sollicitudin ipsum quis mattis aliquam. Pellentesque dictum turpis fermentum mauris viverra
@@ -183,8 +100,8 @@ Integer bibendum ligula non ligula luctus faucibus. Ut ex mi, congue vel est ac,
 Aliquam euismod purus sit amet dui dictum, eget scelerisque risus malesuada. Duis sed eros eu felis sodales efficitur. Cras mi massa, lobortis sit amet diam quis,
 tempor mollis lacus. Suspendisse non sodales nisi.
 
-UbSubchap
-^^^^^^^^^
+subSubchap
+^^^^^^^^^^
 
 Cras elementum quis mi auctor lobortis. Sed vitae varius neque. Nam pretium, massa non rutrum tempus, nisl metus ullamcorper dui, non tristique erat leo ut urna.
 Donec consectetur ac tellus at interdum. Morbi et ante mollis, accumsan nisi in, porta erat. Duis auctor dolor in eleifend tincidunt. Integer ut efficitur augue.
@@ -193,8 +110,9 @@ penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
 Subsubchapter 
 ^^^^^^^^^^^^^
+===== asdffasdf
 
-asdf ->  <-  =>  <= ssfhsfh
+
 
 
 Cras elementum quis mi auctor lobortis. Sed vitae varius neque. Nam pretium, massa non rutrum tempus, nisl metus ullamcorper dui, non tristique erat leo ut urna.
@@ -203,14 +121,11 @@ Nullam lobortis elementum sollicitudin. Donec ornare euismod ultricies. Nunc iac
 penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
 Második
--------
-
-[quote, Charles Lutwidge Dodgson, 'Mathematician and author, also known as http://en.wikipedia.org/wiki/Lewis_Carroll[Lewis Carroll]']
-Never do today what you can put off `'til tomorrow.
+=======
 
 
 
-Chapter x
+chapter x
 ---------
 
 
@@ -219,7 +134,7 @@ est dolor tristique erat. Vestibulum purus libero, tincidunt accumsan dolor eget
 Vivamus at libero ac est rhoncus molestie. Nulla viverra ligula dui, sollicitudin iaculis ante vehicula a. Suspendisse ac mauris quis dui faucibus euismod sit amet
 sit amet purus. Aenean lacinia mi eu dignissim convallis. Fusce pretium euismod dui, id faucibus lacus elementum vel.
 
-Chapter x
+chapter x
 ~~~~~~~~~
 
 
@@ -229,13 +144,13 @@ Vivamus at libero ac est rhoncus molestie. Nulla viverra ligula dui, sollicitudi
 sit amet purus. Aenean lacinia mi eu dignissim convallis. Fusce pretium euismod dui, id faucibus lacus elementum vel.
 
 
-Whapter y
+chapter y
 ---------
 
 
-Vestibulum <<_ubsubchap, something important stuff>> scelerisque lacus congue, ullamcorper enim eget, laoreet ante. Quisque finibus, tellus non sollicitudin tincidunt, urna justo fringilla nisi, et tincidunt
+Vestibulum scelerisque lacus congue, ullamcorper enim eget, laoreet ante. Quisque finibus, tellus non sollicitudin tincidunt, urna justo fringilla nisi, et tincidunt
 est dolor tristique erat. Vestibulum purus libero, tincidunt accumsan dolor eget, aliquet hendrerit urna. Nullam et justo vel enim tincidunt interdum in at massa.
 Vivamus at libero ac est rhoncus molestie. Nulla viverra ligula dui, sollicitudin iaculis ante vehicula a. Suspendisse ac mauris quis dui faucibus euismod sit amet
-sit amet purus. Aenean <<bookmark-a, Ez egy táblázat>> lacinia mi eu dignissim convallis. Fusce pretium euismod dui, id faucibus lacus elementum vel.
+sit amet purus. Aenean lacinia mi eu dignissim convallis. Fusce pretium euismod dui, id faucibus lacus elementum vel.
 
 
