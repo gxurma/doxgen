@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Template TXT to pdf</title>
+<subtitle>With subtitle</subtitle>
+<date>2012. Oktober 12</date>
+<author>
+<personname>
+<firstname>Martin</firstname>
+<surname>Gyurkó</surname>
+</personname>
+<email>martin.gyurko@ge.com</email>
+</author>
+<authorinitials>MG</authorinitials>
+<revhistory>
+<revision>
+<revnumber>2.3</revnumber>
+<date>2012. Oktober 12</date>
+<authorinitials>MG</authorinitials>
+<revremark>valami nagy</revremark>
+</revision>
+</revhistory>
+</info>
+<section xml:id="_goal_of_this_document">
+<title>Goal of this document</title>
+
+</section>
+<section xml:id="_valami">
+<title>valami</title>
+<simpara>To define a template structure of a pdf document used by me.
+To define a template structure of a pdf document used by me.</simpara>
+<simpara>To define a template structure of a pdf document used by me.</simpara>
+</section>
+<section xml:id="_első">
+<title>Első</title>
+<simpara>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas, quam mollis gravida ullamcorper, quam erat bibendum risus, a sollicitudin nulla neque non mi.
+Etiam quis consequat tortor. Mauris in purus fermentum, vehicula massa et, malesuada lorem. Fusce lorem felis, aliquam nec rhoncus nec, ornare eget ex. Maecenas ut urna nulla.
+Sed non convallis libero, vel porta est. Sed varius diam vitae lorem vehicula dictum. Duis sollicitudin ipsum quis mattis aliquam. Pellentesque dictum turpis fermentum mauris viverra
+gravida in et libero. Curabitur semper vestibulum ipsum at fringilla. Suspendisse nisi ex, varius a cursus non, gravida eget urna.</simpara>
+</section>
+<section xml:id="_another_chapter">
+<title>Another chapter</title>
+<simpara>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas, quam mollis gravida ullamcorper, quam erat bibendum risus, a sollicitudin nulla neque non mi.
+Etiam quis consequat tortor. Mauris in purus fermentum, vehicula massa et, malesuada lorem. Fusce lorem felis, aliquam nec rhoncus nec, ornare eget ex. Maecenas ut urna nulla.
+Sed non convallis libero, vel porta est. Sed varius diam vitae lorem vehicula dictum. Duis sollicitudin ipsum quis mattis aliquam. Pellentesque dictum turpis fermentum mauris viverra
+gravida in et libero. Curabitur semper vestibulum ipsum at fringilla. Suspendisse nisi ex, varius a cursus non, gravida eget urna.</simpara>
+<simpara>Suspendisse potenti. Quisque molestie nisl nec tortor mollis, sit amet finibus tortor scelerisque. Vestibulum consequat ipsum auctor nisl tincidunt,
+vel scelerisque nulla vehicula. Quisque id velit vel dui condimentum ultrices sed et dui. Quisque vitae elit mi. Pellentesque vitae gravida libero, nec tristique mauris. Morbi in tincidunt felis. Curabitur cursus mattis quam a porttitor.</simpara>
+<simpara>Integer bibendum ligula non ligula luctus faucibus. Ut ex mi, congue vel est ac, accumsan laoreet ligula. Suspendisse hendrerit leo eu purus aliquam imperdiet.
+Aliquam euismod purus sit amet dui dictum, eget scelerisque risus malesuada. Duis sed eros eu felis sodales efficitur. Cras mi massa, lobortis sit amet diam quis,
+tempor mollis lacus. Suspendisse non sodales nisi.</simpara>
+<tip>
+<simpara>TIP:</simpara>
+</tip>
+<caution>
+<simpara>CAUTION:</simpara>
+</caution>
+<important>
+<simpara>IMPORTANT:</simpara>
+</important>
+<note>
+<simpara>NOTE:</simpara>
+</note>
+<warning>
+<simpara>WARNING:</simpara>
+</warning>
+<simpara>Cras elementum quis mi auctor lobortis. Sed vitae varius neque. Nam pretium, massa non rutrum tempus, nisl metus ullamcorper dui, non tristique erat leo ut urna.
+Donec consectetur ac tellus at interdum. Morbi et ante mollis, accumsan nisi in, porta erat. Duis auctor dolor in eleifend tincidunt. Integer ut efficitur augue.
+Nullam lobortis elementum sollicitudin. Donec ornare euismod ultricies. Nunc iaculis orci in vestibulum iaculis. Nullam egestas volutpat tincidunt. Orci varius natoque
+penatibus et magnis dis parturient montes, nascetur ridiculus mus.</simpara>
+<simpara>Vestibulum scelerisque lacus congue, ullamcorper enim eget, laoreet ante. Quisque finibus, tellus non sollicitudin tincidunt, urna justo fringilla nisi, et tincidunt
+est dolor tristique erat. Vestibulum purus libero, tincidunt accumsan dolor eget, aliquet hendrerit urna. Nullam et justo vel enim tincidunt interdum in at massa.
+Vivamus at libero ac est rhoncus molestie. Nulla viverra ligula dui, sollicitudin iaculis ante vehicula a. Suspendisse ac mauris quis dui faucibus euismod sit amet
+sit amet purus. Aenean lacinia mi eu dignissim convallis. Fusce pretium euismod dui, id faucibus lacus elementum vel.</simpara>
+<table xml:id="bookmark-a" frame="all" rowsep="1" colsep="1">
+<title>Ez egy táblázat</title>
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="50*"/>
+<colspec colname="col_2" colwidth="50*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Próba</entry>
+<entry align="left" valign="top">Próba 2</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara>1234</simpara></entry>
+<entry align="left" valign="top"><simpara>qwers</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>1234</simpara></entry>
+<entry align="left" valign="top"><simpara>qwers</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>1234</simpara></entry>
+<entry align="left" valign="top"><simpara>qwers</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>1234</simpara></entry>
+<entry align="left" valign="top"><simpara>qwers</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>1234</simpara></entry>
+<entry align="left" valign="top"><simpara>qwers</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>1234</simpara></entry>
+<entry align="left" valign="top"><simpara>qwers</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>1234</simpara></entry>
+<entry align="left" valign="top"><simpara>qwers</simpara></entry>
+</row>
+</tbody>
+<tfoot>
+<row>
+<entry align="left" valign="top"><simpara>1234</simpara></entry>
+<entry align="left" valign="top"><simpara>qwers</simpara></entry>
+</row>
+</tfoot>
+</tgroup>
+</table>
+</section>
+<section xml:id="_purus_fermentum">
+<title>purus fermentum</title>
+<caution>
+<simpara>Itt ez egy veszély</simpara>
+</caution>
+<important>
+<simpara>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas, quam mollis gravida ullamcorper, quam erat bibendum risus, a sollicitudin nulla neque non mi.
+Etiam quis consequat tortor. Mauris in purus fermentum, vehicula massa et, malesuada lorem. Fusce lorem felis, aliquam nec rhoncus nec, ornare eget ex. Maecenas ut urna nulla.</simpara>
+</important>
+<note>
+<simpara>Itt ez egy veszély</simpara>
+</note>
+<literallayout class="monospaced">valami prózai chapter
+ez is prózai
+* lista <co xml:id="CO1-1"/>
+* liste <co xml:id="CO1-2"/>
+** liste <co xml:id="CO1-3"/>
+** liste <co xml:id="CO1-4"/>
+* liste <co xml:id="CO1-5"/></literallayout>
+<calloutlist>
+<callout arearefs="CO1-1">
+<para>qwerqet</para>
+</callout>
+<callout arearefs="CO1-2 CO1-4">
+<para>asdagasd</para>
+</callout>
+<callout arearefs="CO1-3">
+<para>asssd sd sd sdf</para>
+</callout>
+<callout arearefs="CO1-5">
+<para>asdf asdf asdf asdf</para>
+<itemizedlist>
+<listitem>
+<simpara>liste</simpara>
+<itemizedlist>
+<listitem>
+<simpara>liste</simpara>
+</listitem>
+<listitem>
+<simpara>liste</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>liste</simpara>
+<itemizedlist>
+<listitem>
+<simpara>valami hosszu lista dolog
+ami többsoros is.</simpara>
+<itemizedlist>
+<listitem>
+<simpara>és még több sor</simpara>
+<itemizedlist>
+<listitem>
+<simpara>ez ismétlődik?</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>és?</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Naugye</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Mégse</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Vége</simpara>
+</listitem>
+</itemizedlist>
+</callout>
+</calloutlist>
+<itemizedlist mark="square">
+<listitem>
+<simpara>liste</simpara>
+</listitem>
+<listitem>
+<simpara>liste</simpara>
+</listitem>
+<listitem>
+<simpara>liste</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>liste</simpara>
+<orderedlist numeration="loweralpha">
+<listitem>
+<simpara>liste</simpara>
+</listitem>
+<listitem>
+<simpara>liste</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+<listitem>
+<simpara>liste</simpara>
+<orderedlist numeration="loweralpha">
+<listitem>
+<simpara>valami hosszu lista dolog
+ami többsoros is.</simpara>
+<orderedlist numeration="lowerroman">
+<listitem>
+<simpara>és még több sor</simpara>
+<orderedlist numeration="upperalpha">
+<listitem>
+<simpara>ez ismétlődik?</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+</orderedlist>
+</listitem>
+<listitem>
+<simpara>és?</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+<listitem>
+<simpara>Naugye</simpara>
+<orderedlist numeration="loweralpha">
+<listitem>
+<simpara>Mégse</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+<listitem>
+<simpara>Vége</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+</itemizedlist>
+<simpara>Valami szép:</simpara>
+<itemizedlist mark="none">
+<listitem>
+<simpara>&#10063; Ez egy Checkmark</simpara>
+</listitem>
+<listitem>
+<simpara>&#10003; Ez is</simpara>
+</listitem>
+<listitem>
+<simpara>&#10003; Erre mit szólsz</simpara>
+</listitem>
+<listitem>
+<simpara>[o] Erre mit szólsz</simpara>
+</listitem>
+</itemizedlist>
+<tip>
+<simpara>qwe4tqertawert qert qert qertq<?asciidoc-br?>
+qert qert qert qergtgadfg wthn asth</simpara>
+</tip>
+<simpara>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas, quam mollis gravida ullamcorper, quam erat bibendum risus, a sollicitudin nulla neque non mi.
+Etiam quis consequat tortor. Mauris in purus fermentum, vehicula massa et, malesuada lorem. Fusce lorem felis, aliquam nec rhoncus nec, ornare eget ex. Maecenas ut urna nulla.
+Sed non convallis libero, vel porta est. Sed varius diam vitae lorem vehicula dictum. Duis sollicitudin ipsum quis mattis aliquam. Pellentesque dictum turpis fermentum mauris viverra
+gravida in et libero. Curabitur semper vestibulum ipsum at fringilla. Suspendisse nisi ex, varius a cursus non, gravida eget urna.
+Suspendisse potenti. Quisque molestie nisl nec tortor mollis, sit amet finibus tortor scelerisque. Vestibulum consequat ipsum auctor nisl tincidunt,
+vel scelerisque nulla vehicula. Quisque id velit vel dui condimentum ultrices sed et dui. Quisque vitae elit mi. Pellentesque vitae gravida libero, nec tristique mauris. Morbi in tincidunt felis. Curabitur cursus mattis quam a porttitor.</simpara>
+<section xml:id="_subchapter">
+<title>Subchapter</title>
+<simpara>Integer bibendum ligula non ligula luctus faucibus. Ut ex mi, congue vel est ac, accumsan laoreet ligula. Suspendisse hendrerit leo eu purus aliquam imperdiet.
+Aliquam euismod purus sit amet dui dictum, eget scelerisque risus malesuada. Duis sed eros eu felis sodales efficitur. Cras mi massa, lobortis sit amet diam quis,
+tempor mollis lacus. Suspendisse non sodales nisi.</simpara>
+<section xml:id="_ubsubchap">
+<title>UbSubchap</title>
+<simpara>Cras elementum quis mi auctor lobortis. Sed vitae varius neque. Nam pretium, massa non rutrum tempus, nisl metus ullamcorper dui, non tristique erat leo ut urna.
+Donec consectetur ac tellus at interdum. Morbi et ante mollis, accumsan nisi in, porta erat. Duis auctor dolor in eleifend tincidunt. Integer ut efficitur augue.
+Nullam lobortis elementum sollicitudin. Donec ornare euismod ultricies. Nunc iaculis orci in vestibulum iaculis. Nullam egestas volutpat tincidunt. Orci varius natoque
+penatibus et magnis dis parturient montes, nascetur ridiculus mus.</simpara>
+</section>
+<section xml:id="_subsubchapter">
+<title>Subsubchapter</title>
+<simpara>asdf &#8594;  &#8592;  &#8658;  &#8656; ssfhsfh</simpara>
+<simpara>Cras elementum quis mi auctor lobortis. Sed vitae varius neque. Nam pretium, massa non rutrum tempus, nisl metus ullamcorper dui, non tristique erat leo ut urna.
+Donec consectetur ac tellus at interdum. Morbi et ante mollis, accumsan nisi in, porta erat. Duis auctor dolor in eleifend tincidunt. Integer ut efficitur augue.
+Nullam lobortis elementum sollicitudin. Donec ornare euismod ultricies. Nunc iaculis orci in vestibulum iaculis. Nullam egestas volutpat tincidunt. Orci varius natoque
+penatibus et magnis dis parturient montes, nascetur ridiculus mus.</simpara>
+</section>
+</section>
+</section>
+<section xml:id="_második">
+<title>Második</title>
+<blockquote>
+<attribution>
+Charles Lutwidge Dodgson
+<citetitle>Mathematician and author, also known as <link xl:href="http://en.wikipedia.org/wiki/Lewis_Carroll">Lewis Carroll</link></citetitle>
+</attribution>
+<simpara>Never do today what you can put off &#8217;til tomorrow.</simpara>
+</blockquote>
+</section>
+<section xml:id="_chapter_x">
+<title>Chapter x</title>
+<simpara>Vestibulum scelerisque lacus congue, ullamcorper enim eget, laoreet ante. Quisque finibus, tellus non sollicitudin tincidunt, urna justo fringilla nisi, et tincidunt
+est dolor tristique erat. Vestibulum purus libero, tincidunt accumsan dolor eget, aliquet hendrerit urna. Nullam et justo vel enim tincidunt interdum in at massa.
+Vivamus at libero ac est rhoncus molestie. Nulla viverra ligula dui, sollicitudin iaculis ante vehicula a. Suspendisse ac mauris quis dui faucibus euismod sit amet
+sit amet purus. Aenean lacinia mi eu dignissim convallis. Fusce pretium euismod dui, id faucibus lacus elementum vel.</simpara>
+<section xml:id="_chapter_x_2">
+<title>Chapter x</title>
+<simpara>Vestibulum scelerisque lacus congue, ullamcorper enim eget, laoreet ante. Quisque finibus, tellus non sollicitudin tincidunt, urna justo fringilla nisi, et tincidunt
+est dolor tristique erat. Vestibulum purus libero, tincidunt accumsan dolor eget, aliquet hendrerit urna. Nullam et justo vel enim tincidunt interdum in at massa.
+Vivamus at libero ac est rhoncus molestie. Nulla viverra ligula dui, sollicitudin iaculis ante vehicula a. Suspendisse ac mauris quis dui faucibus euismod sit amet
+sit amet purus. Aenean lacinia mi eu dignissim convallis. Fusce pretium euismod dui, id faucibus lacus elementum vel.</simpara>
+</section>
+</section>
+<section xml:id="_whapter_y">
+<title>Whapter y</title>
+<simpara>Vestibulum <link linkend="UbSubchap">something important stuff</link> scelerisque lacus congue, ullamcorper enim eget, laoreet ante. Quisque finibus, tellus non sollicitudin tincidunt, urna justo fringilla nisi, et tincidunt
+est dolor tristique erat. Vestibulum purus libero, tincidunt accumsan dolor eget, aliquet hendrerit urna. Nullam et justo vel enim tincidunt interdum in at massa.
+Vivamus at libero ac est rhoncus molestie. Nulla viverra ligula dui, sollicitudin iaculis ante vehicula a. Suspendisse ac mauris quis dui faucibus euismod sit amet
+sit amet purus. Aenean <link linkend="bookmark-a">Ez egy táblázat</link> lacinia mi eu dignissim convallis. Fusce pretium euismod dui, id faucibus lacus elementum vel.</simpara>
+</section>
+</article>

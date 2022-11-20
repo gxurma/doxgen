@@ -127,7 +127,7 @@ title_page:
   align: right
   logo:
     top: 10%
-    image: image:logoGy.svg[width=250]
+    image: image:ENGYNEER.svg[width=350]
   title:
     top: 45%
     font_size: $heading_h1_font_size
@@ -151,8 +151,8 @@ title_page:
     font_size: $base_font_size_small 
     font_style: normal
     content: |
-      Gyurma's Electronics PROPRIETARY INFORMATION:
-      The information contained in this document is Gyurma's Electronics Company proprietary information and is disclosed in confidence. It is the property  of  Gyurma's Electronics  and  shall  not  be  used,  disclosed  to  others  or  reproduced  without  the  express  written  consent  of  Gyurma's Electronics ,  including,  but without limitation, it is not to be used in the creation, manufacture, development, or derivation of any repairs, modifications, spare parts, designs, or configuration changes or to obtain government or regulatory approval to do so. If consent is given for reproduction in whole or in part, this notice and the notice set forth on each page of this document shall appear in any such reproduction in whole or in part.
+      enGYneer PROPRIETARY INFORMATION:
+      The information contained in this document is enGYneer Company proprietary information and is disclosed in confidence. It is the property  of  enGYneer  and  shall  not  be  used,  disclosed  to  others  or  reproduced  without  the  express  written  consent  of  enGYneer,  including,  but without limitation, it is not to be used in the creation, manufacture, development, or derivation of any repairs, modifications, spare parts, designs, or configuration changes or to obtain government or regulatory approval to do so. If consent is given for reproduction in whole or in part, this notice and the notice set forth on each page of this document shall appear in any such reproduction in whole or in part.
 block:
   margin_top: 0
   margin_bottom: $vertical_rhythm
@@ -327,7 +327,7 @@ header:
     center:
       font_size: $base_font_size_small
       content: |
-        *Gyurmas Electronics* +
+        *enGYneer* +
         by Martin Gyurkó +
         Maurach 211d +
         A-6220 Buch in Tirol +
@@ -375,7 +375,7 @@ footer:
     #  content: '{page-number}'
       # content: '{document-title}'
       content: |
-        Gyurmas Electronics Property: Use or disclosure of data contained on
+        enGYneer Property: Use or disclosure of data contained on
         this sheet is subject to the restrictions on the cover or first page. +
         File:  {docname}{outfilesuffix}
     right:

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="86.275299mm"
+   height="27.577452mm"
+   viewBox="10 0 26.899445 10.645246"
+   version="1.1"
+   id="svg6242"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="ENGYNEER.svg">
+  <defs
+     id="defs6236" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6"
+     inkscape:cx="214.32361"
+     inkscape:cy="90.635455"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="3761"
+     inkscape:window-height="2131"
+     inkscape:window-x="70"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata6239">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-1.3948904,-1.1537477)">
+    <g
+       id="g6877"
+       transform="matrix(0.39539713,0,0,0.41463982,-11.774921,-36.742425)">
+      <g
+         inkscape:label="1. réteg"
+         id="layer1-2"
+         transform="matrix(0.33333336,0,0,0.33333336,69.903151,84.489475)">
+        <path
+           style="fill:#313d8d;fill-opacity:1;stroke-width:0.26458332"
+           d="M 2.6647318,78.520406 V 40.040777 l 36.2148782,-19.323 36.280955,19.30372 0.14054,14.884754 H 52.53869 C 47.529226,40.965745 29.34528,43.042447 24.834392,53.855942 c -4.510889,10.813496 4.204159,21.023676 13.883829,20.512068 9.679671,-0.511608 12.99559,-7.51607 14.097846,-9.937485 l 9.510625,9.661801 -23.678629,23.645881 z m 72.6195712,-15.051338 -1.930688,0.0045 -9.647296,9.093725 -9.289923,-9.200891 -15.950231,0.03954 -0.04961,-3.945127 42.964081,-0.101578 -0.0024,4.046708 -6.093973,0.06307 -0.123736,15.070758 -32.808337,17.441558 z"
+           id="path45"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccczzcccccccccccccccc"
+           inkscape:export-xdpi="6.7764707"
+           inkscape:export-ydpi="6.7764707" />
+      </g>
+      <g
+         transform="translate(73.656432,53.848292)"
+         inkscape:label="Ebene 1"
+         id="layer1-1">
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot5639"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+             id="flowRegion5641"><rect
+               id="rect5643"
+               width="542.4519"
+               height="322.23865"
+               x="57.578693"
+               y="167.92554" /></flowRegion><flowPara
+             id="flowPara5645" /></flowRoot>        <g
+           aria-label="NEER"
+           transform="scale(0.26458333)"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.73333359px;line-height:1.25;font-family:SESimplex;-inkscape-font-specification:'SESimplex, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+           id="flowRoot5647">
+          <path
+             inkscape:connector-curvature="0"
+             d="m 124.09108,210.69071 h -0.91829 L 97.749154,172.59462 v 38.09609 H 96.90957 v -39.51289 h 0.918295 l 25.397395,38.0961 v -38.0961 h 0.86582 z"
+             style="fill:#313d8d;fill-opacity:0.94117647"
+             id="path5655" />
+          <path
+             inkscape:connector-curvature="0"
+             d="m 160.9278,211.05803 h -24.87266 v -40.3 h 24.87266 v 0.86582 h -24.03307 v 17.9461 h 14.64023 v 0.86582 h -14.64023 v 19.80891 h 24.03307 z"
+             style="fill:#313d8d;fill-opacity:0.94117647"
+             id="path5657" />
+          <path
+             inkscape:connector-curvature="0"
+             d="m 194.72102,211.05803 h -24.87265 v -40.3 h 24.87265 v 0.86582 h -24.03307 v 17.9461 h 14.64024 v 0.86582 h -14.64024 v 19.80891 h 24.03307 z"
+             style="fill:#313d8d;fill-opacity:0.94117647"
+             id="path5659" />
+          <path
+             inkscape:connector-curvature="0"
+             d="m 230.82311,182.59091 -1.94154,3.90931 -2.04648,1.99401 -5.79838,1.94154 h -2.99101 l 12.72493,20.01881 -0.76087,0.39356 -12.98731,-20.41237 h -12.54127 v 20.25494 h -0.83958 v -39.93268 h 17.39511 l 5.79838,1.94154 2.04648,1.96777 1.94154,3.93555 z m -0.86582,-0.23613 v -3.542 l -1.81036,-3.59446 -1.73164,-1.78412 -5.48353,-1.81035 h -16.45058 v 17.9461 h 16.45058 l 5.48353,-1.83659 1.73164,-1.75788 z"
+             style="fill:#313d8d;fill-opacity:0.94117647"
+             id="path5661" />
+        </g>
+      </g>
+      <g
+         transform="translate(18.409331,63.679069)"
+         inkscape:label="Ebene 1"
+         id="layer1-8">
+        <g
+           aria-label="EN"
+           transform="scale(0.26458333)"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.73333359px;line-height:1.25;font-family:SESimplex;-inkscape-font-specification:'SESimplex, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#313d8d;fill-opacity:1;stroke:none"
+           id="flowRoot6223">
+          <path
+             inkscape:connector-curvature="0"
+             d="m 146.16309,172.55022 h -24.87266 v -40.3 h 24.87266 v 0.86582 h -24.03308 v 17.94609 h 14.64024 v 0.86582 h -14.64024 v 19.80892 h 24.03308 z"
+             id="path6231" />
+          <path
+             inkscape:connector-curvature="0"
+             d="m 182.26517,172.1829 h -0.9183 l -25.42363,-38.09609 v 38.09609 h -0.83958 v -39.51289 h 0.91829 l 25.3974,38.09609 v -38.09609 h 0.86582 z"
+             id="path6233" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
