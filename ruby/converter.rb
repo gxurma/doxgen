@@ -126,10 +126,6 @@ module Asciidoctor
           # NOTE enabling data-uri forces Asciidoctor Diagram to produce absolute image paths
           doc.attributes['data-uri'] = ((doc.instance_variable_get :@attribute_overrides) || {})['data-uri'] = ''
         end
-        @capabilities = {
-          special_sectnums: AsciidoctorVersion >= (::Gem::Version.new '1.5.7'),
-          syntax_highlighter: AsciidoctorVersion >= (::Gem::Version.new '2.0.0'),
-        }
         @initial_instance_variables = [:@initial_instance_variables] + instance_variables
       end
 
@@ -165,9 +161,6 @@ module Asciidoctor
         init_pdf doc
         # set default value for pagenums if not otherwise set
         doc.attributes['pagenums'] = '' unless (doc.attribute_locked? 'pagenums') || ((doc.instance_variable_get :@attributes_modified).include? 'pagenums')
-        if (idx_sect = doc.sections.find {|candidate| candidate.sectname == 'index' }) && idx_sect.numbered
-          idx_sect.numbered = false
-        end unless @capabilities[:special_sectnums]
         #assign_missing_section_ids doc
 
         # promote anonymous preface (defined using preamble block) to preface section
@@ -334,7 +327,7 @@ module Asciidoctor
         # QUESTION should ThemeLoader handle registering fonts instead?
         register_fonts theme.font_catalog, (doc.attr 'pdf-fontsdir', 'GEM_FONTS_DIR')
         default_kerning theme.base_font_kerning != 'none'
-        @fallback_fonts = [*theme.font_fallbacks]
+        @fallback_fonts = Array theme.font_fallbacks
         @allow_uri_read = doc.attr? 'allow-uri-read'
         @cache_uri = doc.attr? 'cache-uri'
         @tmp_files = {}
@@ -375,7 +368,10 @@ module Asciidoctor
         @index = IndexCatalog.new
         # NOTE: we have to init Pdfmark class here while we have reference to the doc
         @pdfmark = (doc.attr? 'pdfmark') ? (Pdfmark.new doc) : nil
-        @optimize = doc.attr 'optimize'
+        # NOTE: defer instantiating optimizer until we know min pdf version
+        if (@optimize = doc.attr 'optimize')
+          @optimize = nil unless (defined? ::Asciidoctor::PDF::Optimizer) || !(Helpers.require_library OptimizerRequirePath, 'rghost', :warn).nil?
+        end
         init_scratch_prototype
         self
       end
@@ -611,13 +607,18 @@ module Asciidoctor
       def layout_footnotes node
         return if (fns = (doc = node.document).footnotes - @footnotes).empty?
         theme_margin :footnotes, :top
-        theme_font :footnotes do
-          (title = doc.attr 'footnotes-title') && (layout_caption title, category: :footnotes)
-          item_spacing = @theme.footnotes_item_spacing || 0
-          fns.each do |fn|
-            layout_prose %(<a id="_footnotedef_#{index = fn.index}">#{DummyText}</a>[<a anchor="_footnoteref_#{index}">#{index}</a>] #{fn.text}), margin_bottom: item_spacing, hyphenate: true
+        with_dry_run do |box_height = nil|
+          if box_height && (delta = cursor - box_height) > 0
+            move_down delta
           end
-          @footnotes += fns
+          theme_font :footnotes do
+            (title = doc.attr 'footnotes-title') && (layout_caption title, category: :footnotes)
+            item_spacing = @theme.footnotes_item_spacing
+            fns.each do |fn|
+              layout_prose %(<a id="_footnotedef_#{index = fn.index}">#{DummyText}</a>[<a anchor="_footnoteref_#{index}">#{index}</a>] #{fn.text}), margin_bottom: item_spacing, hyphenate: true
+            end
+            @footnotes += fns unless scratch?
+          end
         end
         nil
       end
@@ -1079,7 +1080,7 @@ module Asciidoctor
           stack_subject = node.has_role? 'stack'
           subject_stop = node.attr 'subject-stop', (stack_subject ? nil : ':'), false
           node.items.each do |subjects, dd|
-            subject = [*subjects].first.text
+            subject = (Array subjects).first.text
             list_item_text = %(+++<strong>#{subject}#{(StopPunctRx.match? sanitize subject) ? '' : subject_stop}</strong>#{dd.text? ? "#{stack_subject ? '<br>' : ' '}#{dd.text}" : ''}+++)
             list_item = ListItem.new list, list_item_text
             dd.blocks.each {|it| list_item << it }
@@ -1633,9 +1634,7 @@ module Asciidoctor
         add_dest_for_block node if node.id
 
         # HACK: disable built-in syntax highlighter; must be done before calling node.content!
-        if node.style == 'source' && (highlighter = @capabilities[:syntax_highlighter] ?
-            (syntax_hl = node.document.syntax_highlighter) && syntax_hl.highlight? && syntax_hl.name :
-            (highlighter = node.document.attributes['source-highlighter']) && (SourceHighlighters.include? highlighter) && highlighter)
+        if node.style == 'source' && (highlighter = (syntax_hl = node.document.syntax_highlighter)&.highlight? && syntax_hl.name)
           case highlighter
           when 'coderay'
             unless defined? ::Asciidoctor::Prawn::CodeRayEncoder
@@ -2124,10 +2123,6 @@ module Asciidoctor
         else
           table_width = bounds.width * ((node.attr 'tablepcwidth') / 100.0)
           column_widths = node.columns.map {|col| ((col.attr 'colpcwidth') * table_width) / 100.0 }
-          # NOTE: until Asciidoctor 1.5.4, colpcwidth values didn't always add up to 100%; use last column to compensate
-          unless column_widths.empty? || (width_delta = table_width - column_widths.sum) == 0
-            column_widths[-1] += width_delta
-          end
         end
 
         if ((alignment = node.attr 'align', nil, false) && (BlockAlignmentNames.include? alignment)) ||
@@ -2358,7 +2353,7 @@ module Asciidoctor
             bare_target = target
             text = node.text
           end
-          if (role = node.attr 'role', nil, false) && (role == 'bare' || ((role.split ' ').include? 'bare'))
+          if (role = node.attr 'role', nil, false) && (role == 'bare' || (role.split.include? 'bare'))
             # QUESTION should we insert breakable chars into URI when building fragment instead?
             %(<a href="#{target}"#{attrs.join}>#{breakable_uri text}</a>)
           # NOTE @media may not be initialized if method is called before convert phase
@@ -2377,13 +2372,8 @@ module Asciidoctor
             %(<a href="#{target}">#{node.text || path}</a>)
           elsif (refid = node.attributes['refid'])
             unless (text = node.text)
-              if (refs = doc.catalog[:refs])
-                if ::Asciidoctor::AbstractNode === (ref = refs[refid])
-                  text = ref.xreftext node.attr 'xrefstyle', nil, true
-                end
-              else
-                # Asciidoctor < 1.5.6
-                text = doc.catalog[:ids][refid]
+              if ::Asciidoctor::AbstractNode === (ref = doc.catalog[:refs][refid])
+                text = ref.xreftext node.attr 'xrefstyle', nil, true
               end
             end
             %(<a anchor="#{derive_anchor_from_id refid}">#{text || "[#{refid}]"}</a>).gsub ']', '&#93;'
@@ -2419,10 +2409,10 @@ module Asciidoctor
       end
 
       def convert_inline_callout node
-        if (conum_font_family = @theme.conum_font_family) != font_name
-          result = %(<font name="#{conum_font_family}">#{conum_glyph node.text.to_i}</font>)
-        else
+        if (conum_font_family = @theme.conum_font_family) == font_name
           result = conum_glyph node.text.to_i
+        else
+          result = %(<font name="#{conum_font_family}">#{conum_glyph node.text.to_i}</font>)
         end
         if (conum_font_color = @theme.conum_font_color)
           # NOTE CMYK value gets flattened here, but is restored by formatted text parser
@@ -2765,7 +2755,6 @@ module Asciidoctor
 				normalize: false)
 			end
  	      end		  
-
 
 
 
@@ -3459,12 +3448,12 @@ module Asciidoctor
               end
               tot_width = 0
               side_colspecs = colspecs.map {|col, spec|
-                if (alignment_char = spec.chr).to_i.to_s != alignment_char
-                  alignment = AlignmentTable[alignment_char] || :left
-                  rel_width = (spec.slice 1, spec.length).to_f
-                else
+                if (alignment_char = spec.chr).to_i.to_s == alignment_char
                   alignment = :left
                   rel_width = spec.to_f
+                else
+                  alignment = AlignmentTable[alignment_char] || :left
+                  rel_width = (spec.slice 1, spec.length).to_f
                 end
                 tot_width += rel_width
                 [col, { align: alignment, width: rel_width, x: 0 }]
@@ -3627,7 +3616,7 @@ module Asciidoctor
           pdf_doc.render_file target
           # QUESTION restore attributes first?
           @pdfmark&.generate_file target
-          (Optimizer.new @optimize, pdf_doc.min_version).generate_file target if @optimize && ((defined? ::Asciidoctor::PDF::Optimizer) || !(Helpers.require_library OptimizerRequirePath, 'rghost', :warn).nil?)
+          (Optimizer.new @optimize, pdf_doc.min_version).optimize_file target if @optimize
         end
         # write scratch document if debug is enabled (or perhaps DEBUG_STEPS env)
         #get_scratch_document.render_file 'scratch.pdf'
