@@ -225,6 +225,9 @@ Chapter x
 
 Vestibulum scelerisque lacus congue, ullamcorper enim eget, laoreet ante. Quisque finibus, tellus non sollicitudin tincidunt, urna justo fringilla nisi, et tincidunt
 est dolor tristique erat. Vestibulum purus libero, tincidunt accumsan dolor eget, aliquet hendrerit urna. Nullam et justo vel enim tincidunt interdum in at massa.
+
+image::GY-Logo_GE.png[title="Das ist ein Bild"]
+
 Vivamus at libero ac est rhoncus molestie. Nulla viverra ligula dui, sollicitudin iaculis ante vehicula a. Suspendisse ac mauris quis dui faucibus euismod sit amet
 sit amet purus. Aenean lacinia mi eu dignissim convallis. Fusce pretium euismod dui, id faucibus lacus elementum vel.
 
