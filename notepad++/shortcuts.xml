@@ -77,8 +77,8 @@
             <Action type="0" message="2300" wParam="0" lParam="0" sParam="" />
             <Action type="0" message="2315" wParam="0" lParam="0" sParam="" />
             <Action type="0" message="2180" wParam="0" lParam="0" sParam="" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="
+" />
         </Macro>
         <Macro name="underline^" Ctrl="yes" Alt="no" Shift="yes" Key="119">
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="^" />
@@ -105,8 +105,8 @@
             <Action type="0" message="2300" wParam="0" lParam="0" sParam="" />
             <Action type="0" message="2315" wParam="0" lParam="0" sParam="" />
             <Action type="0" message="2180" wParam="0" lParam="0" sParam="" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="
+" />
         </Macro>
         <Macro name="underline-" Ctrl="yes" Alt="no" Shift="yes" Key="117">
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="-" />
@@ -132,8 +132,8 @@
             <Action type="0" message="2300" wParam="0" lParam="0" sParam="" />
             <Action type="0" message="2315" wParam="0" lParam="0" sParam="" />
             <Action type="0" message="2180" wParam="0" lParam="0" sParam="" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="
+" />
         </Macro>
         <Macro name="underline=" Ctrl="yes" Alt="no" Shift="yes" Key="116">
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="=" />
@@ -161,8 +161,8 @@
             <Action type="0" message="2300" wParam="0" lParam="0" sParam="" />
             <Action type="0" message="2315" wParam="0" lParam="0" sParam="" />
             <Action type="0" message="2180" wParam="0" lParam="0" sParam="" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="
+" />
         </Macro>
         <Macro name="image line" Ctrl="yes" Alt="no" Shift="yes" Key="73">
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="i" />
@@ -206,9 +206,9 @@
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="u" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="r" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="k" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x00F3;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="ó" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&lt;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="<" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="m" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="a" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="r" />
@@ -223,18 +223,18 @@
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="k" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="@" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="i" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="n" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="n" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="i" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="." />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="c" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="g" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="y" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="u" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="r" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="m" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&gt;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="a" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="." />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="d" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="e" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=">" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="
+" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="v" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="1" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="." />
@@ -258,15 +258,15 @@
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="a" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="m" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="i" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="
+" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="c" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="
+" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
@@ -280,8 +280,8 @@
             <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="3" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="
+" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="i" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="c" />
@@ -293,8 +293,8 @@
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="n" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="
+" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="d" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
@@ -309,8 +309,8 @@
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="k" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="
+" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="c" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="h" />
@@ -326,8 +326,8 @@
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="e" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="l" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="
+" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam=":" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="t" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="a" />
@@ -347,10 +347,9 @@
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="o" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="d" />
             <Action type="1" message="2170" wParam="0" lParam="0" sParam="d" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000D;" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&#x000A;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="
+
+" />
         </Macro>
     </Macros>
     <UserDefinedCommands>
