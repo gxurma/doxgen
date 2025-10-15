@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'formatted_string'
 require_relative 'formatted_text'
 require_relative 'index_catalog'
 require_relative 'pdfmark'
@@ -104,7 +103,7 @@ module Asciidoctor
       }
       TypographicQuotes = %w(&#8220; &#8221; &#8216; &#8217;)
       InlineFormatSniffRx = /[<&]/
-      SimpleAttributeRefRx = /(?<!\\)\{\w+(?:-\w+)*\}/
+      SimpleAttributeRefRx = /(?<!\\)\{(\w+(?:-\w+)*)\}/
       MeasurementRxt = '\\d+(?:\\.\\d+)?(?:in|cm|mm|p[txc])?'
       MeasurementPartsRx = /^(\d+(?:\.\d+)?)(in|mm|cm|p[txc])?$/
       PageSizeRx = /^(?:\[(#{MeasurementRxt}), ?(#{MeasurementRxt})\]|(#{MeasurementRxt})(?: x |x)(#{MeasurementRxt})|\S+)$/
@@ -403,7 +402,7 @@ module Asciidoctor
         @page_bg_image = {}
         @page_bg_color = resolve_theme_color :page_background_color, 'FFFFFF'
         # QUESTION: should ThemeLoader handle registering fonts instead?
-        register_fonts theme.font_catalog, ((doc.attr 'pdf-fontsdir')&.sub '{docdir}', (doc.attr 'docdir')) || 'GEM_FONTS_DIR'
+        register_fonts theme.font_catalog, ((doc.attr 'pdf-fontsdir')&.sub '{docdir}', (doc.attr 'docdir')) || (theme.__dir__ == ThemeLoader::ThemesDir ? 'GEM_FONTS_DIR' : %(#{theme.__dir__};GEM_FONTS_DIR))
         default_kerning theme.base_font_kerning != 'none'
         @fallback_fonts = Array theme.font_fallbacks
         @root_font_size = theme.base_font_size
@@ -710,6 +709,7 @@ module Asciidoctor
       end
 
       def convert_index_section node
+        @index.link_associations
         if ColumnBox === bounds || (columns = @theme.index_columns || 1) < 2
           convert_index_categories @index.categories, (node.document.attr 'index-pagenum-sequence-style')
         else
@@ -739,41 +739,73 @@ module Asciidoctor
       end
 
       def convert_index_term term, pagenum_sequence_style = nil
-        term_fragments = term.name.fragments
+        # NOTE: dup fragment list and all fragments to avoid any modification
+        term_fragments = term.name.fragments.map(&:dup)
         unless term.container?
-          pagenum_fragment = (parse_text %(<a>#{DummyText}</a>), inline_format: true)[0]
           if @media == 'screen'
-            case pagenum_sequence_style
-            when 'page'
-              pagenums = term.dests.uniq {|dest| dest[:page] }.map {|dest| pagenum_fragment.merge anchor: dest[:anchor], text: dest[:page] }
-            when 'range'
-              first_anchor_per_page = {}.tap {|accum| term.dests.each {|dest| accum[dest[:page]] ||= dest[:anchor] } }
-              pagenums = (consolidate_ranges first_anchor_per_page.keys).map do |range|
-                anchor = first_anchor_per_page[(range.include? '-') ? (range.partition '-')[0] : range]
-                pagenum_fragment.merge text: range, anchor: anchor
-              end
-            else # term
-              pagenums = term.dests.map {|dest| pagenum_fragment.merge text: dest[:page], anchor: dest[:anchor] }
-            end
-          else
-            pagenums = consolidate_ranges term.dests.map {|dest| dest[:page] }.uniq
+            link_fragment = (parse_text %(<a>#{DummyText}</a>), inline_format: true)[0]
+            term_fragments.unshift name: term.anchor, callback: [FormattedText::InlineDestinationMarker], text: DummyText
           end
-          pagenums.each do |pagenum|
-            if ::String === pagenum
-              term_fragments << ({ text: %(, #{pagenum}) })
+          if (see = term.see)
+            term_fragments << { text: ' (see ' }
+            if link_fragment && IndexTerm === see
+              link_fragment_ = link_fragment.merge anchor: see.anchor
+              see.name.fragments.each {|it| term_fragments << (link_fragment_.merge it) }
             else
-              term_fragments << { text: ', ' }
-              term_fragments << pagenum
+              term_fragments.concat see.name.fragments
+            end
+            term_fragments << { text: ')' }
+          else
+            if @media == 'screen'
+              case pagenum_sequence_style
+              when 'page'
+                pagenums = term.dests.uniq {|dest| dest[:page] }.map {|dest| link_fragment.merge anchor: dest[:anchor], text: dest[:page] }
+              when 'range'
+                first_anchor_per_page = {}.tap {|accum| term.dests.each {|dest| accum[dest[:page]] ||= dest[:anchor] } }
+                pagenums = (consolidate_ranges first_anchor_per_page.keys).map do |range|
+                  anchor = first_anchor_per_page[(range.include? '-') ? (range.partition '-')[0] : range]
+                  link_fragment.merge text: range, anchor: anchor
+                end
+              else # term
+                pagenums = term.dests.map {|dest| link_fragment.merge text: dest[:page], anchor: dest[:anchor] }
+              end
+            else
+              pagenums = consolidate_ranges term.dests.map {|dest| dest[:page] }.uniq
+            end
+            pagenums.each do |pagenum|
+              if ::String === pagenum
+                term_fragments << ({ text: %(, #{pagenum}) })
+              else
+                term_fragments << { text: ', ' }
+                term_fragments << pagenum
+              end
+            end
+            if (see_also = term.see_also)
+              see_also_items = []
+              see_also.each do |also_term|
+                see_also_fragments = [{ text: '(see also ' }]
+                if link_fragment && IndexTerm === also_term
+                  link_fragment_ = link_fragment.merge anchor: also_term.anchor
+                  also_term.name.fragments.map {|it| see_also_fragments << (link_fragment_.merge it) }
+                else
+                  see_also_fragments.concat also_term.name.fragments
+                end
+                see_also_fragments << { text: ')' }
+                see_also_items << see_also_fragments
+              end
             end
           end
         end
         subterm_indent = @theme.description_list_description_indent
         typeset_formatted_text term_fragments, (calc_line_metrics @base_line_height), align: :left, color: @font_color, hanging_indent: subterm_indent * 2, consolidate: true
         indent subterm_indent do
+          see_also_items&.each do |see_also_fragments|
+            typeset_formatted_text see_also_fragments, (calc_line_metrics @base_line_height), align: :left, color: @font_color, hanging_indent: subterm_indent * 2, consolidate: true
+          end
           term.subterms.each do |subterm|
             convert_index_term subterm, pagenum_sequence_style
-          end
-        end unless term.leaf?
+          end unless term.leaf?
+        end if see_also_items || !term.leaf?
       end
 
       def convert_preamble node
@@ -871,14 +903,19 @@ module Asciidoctor
         end
 
         if (float_box = (@float_box ||= nil))
-          ink_paragraph_in_float_box node, float_box, prose_opts, role_keys, block_next, insert_margin_bottom
-        else
-          # TODO: check if we're within one line of the bottom of the page
-          # and advance to the next page if so (similar to logic for section titles)
-          ink_caption node, labeled: false if node.title?
-          role_keys ? theme_font_cascade(role_keys) { ink_prose node.content, prose_opts } : (ink_prose node.content, prose_opts)
-          insert_margin_bottom.call
+          if (prev_sibling = node.previous_sibling)&.context == :open && (prev_sibling.role? 'float-group')
+            move_cursor_to float_box[:bottom]
+            @float_box = nil
+          else
+            ink_paragraph_in_float_box node, float_box, prose_opts, role_keys, block_next, insert_margin_bottom
+            return
+          end
         end
+        # TODO: check if we're within one line of the bottom of the page
+        # and advance to the next page if so (similar to logic for section titles)
+        ink_caption node, labeled: false if node.title?
+        role_keys ? theme_font_cascade(role_keys) { ink_prose node.content, prose_opts } : (ink_prose node.content, prose_opts)
+        insert_margin_bottom.call
       end
 
       def convert_admonition node
@@ -1421,55 +1458,62 @@ module Asciidoctor
           convert_list list
           markers.pop
         when 'horizontal'
-          table_data = []
-          term_padding = term_padding_no_blocks = term_font_color = term_transform = desc_padding = term_line_metrics = term_inline_format = term_kerning = nil
+          ink_caption node, category: :description_list, labeled: false if node.title?
           max_term_width = 0
+          term_height = term_padding = term_font_styles = term_transform = desc_padding = term_line_metrics = term_inline_format = term_kerning = nil
           theme_font :description_list_term do
-            term_font_color = @font_color
+            term_height = height_of_typeset_text 'A'
             term_transform = @text_transform
             term_inline_format = (term_font_styles = font_styles).empty? ? true : [inherited: { styles: term_font_styles }]
             term_line_metrics = calc_line_metrics @base_line_height
-            term_padding_no_blocks = [term_line_metrics.padding_top, 10, term_line_metrics.padding_bottom, 10]
-            (term_padding = (term_padding_no_blocks.drop 0))[2] += @theme.prose_margin_bottom * 0.5
+            term_padding = [term_line_metrics.padding_top, 10, term_line_metrics.padding_bottom, 10]
             desc_padding = [0, 10, 0, 10]
             term_kerning = default_kerning?
           end
-          actual_node, node = node, node.dup
-          (node.instance_variable_set :@blocks, node.items.map(&:dup)).each do |item|
+          prose_height = height_of_typeset_text 'A'
+          items = node.items.map do |item|
             terms, desc = item
-            term_text = terms.map(&:text).join ?\n
-            term_text = transform_text term_text, term_transform if term_transform
-            if (term_width = width_of term_text, inline_format: term_inline_format, kerning: term_kerning) > max_term_width
-              max_term_width = term_width
+            terms_as_text = terms.map do |term|
+              term_text = term_transform ? (transform_text term.text, term_transform) : term.text
+              if (term_width = width_of term_text, inline_format: term_inline_format, kerning: term_kerning) > max_term_width
+                max_term_width = term_width
+              end
+              term_text
             end
-            row_data = [{
-              text_color: term_font_color,
-              kerning: term_kerning,
-              content: term_text,
-              inline_format: term_inline_format,
-              padding: desc&.blocks? ? term_padding : term_padding_no_blocks,
-              leading: term_line_metrics.leading,
-              # FIXME: prawn-table doesn't have support for final_gap option
-              #final_gap: term_line_metrics.final_gap,
-              valign: :top,
-            }]
-            if desc
-              desc_container = Block.new node, :open
-              desc_container << (Block.new desc_container, :paragraph, source: (desc.instance_variable_get :@text), subs: :default) if desc.text?
-              desc.blocks.each {|b| desc_container << b.dup } if desc.blocks?
-              row_data << { content: (::Prawn::Table::Cell::AsciiDoc.new self, content: (item[1] = desc_container), text_color: @font_color, padding: desc_padding, valign: :top, source_location: desc.source_location) }
-            else
-              row_data << {}
+            [terms_as_text, desc]
+          end
+          term_side_padding = term_padding[1] + (term_left = term_padding[3])
+          max_term_width += term_side_padding
+          term_column_width = [max_term_width, bounds.width * 0.5 - term_side_padding].min
+          term_spacing = @theme.description_list_term_spacing
+          items.each do |terms_as_text, desc|
+            advance_page if !at_page_top? && cursor < [((term_spacing + term_height) * terms_as_text.size) - term_spacing, desc ? prose_height : 0].max
+            initial_y = y
+            initial_page_number = page_number
+            indent term_left, (bounds.width - term_column_width) do
+              theme_font :description_list_term do
+                terms_as_text.each_with_index do |term_text, idx|
+                  ink_prose term_text, margin_top: (idx > 0 ? term_spacing : 0), margin_bottom: 0, align: :left, normalize_line_height: true, styles: term_font_styles
+                end
+              end
             end
-            table_data << row_data
+            if desc # rubocop:disable Style/Next
+              after_term_y = y
+              after_term_page_number = page_number
+              go_to_page initial_page_number if page_number > initial_page_number
+              @y = initial_y
+              indent term_column_width + desc_padding[3], desc_padding[1] do
+                traverse_list_item desc, :dlist_desc, normalize_line_height: true, margin_bottom: ((next_enclosed_block desc, descend: true) ? nil : 0)
+              end
+              if page_number < after_term_page_number
+                go_to_page after_term_page_number
+                @y = after_term_y
+              elsif y > after_term_y
+                @y = after_term_y
+              end
+            end
           end
-          max_term_width += (term_padding[1] + term_padding[3])
-          term_column_width = [max_term_width, bounds.width * 0.5].min
-          table table_data, position: :left, column_widths: [term_column_width] do
-            cells.style border_width: 0
-            @pdf.ink_table_caption node if node.title?
-          end
-          theme_margin :prose, :bottom, (next_enclosed_block actual_node) #unless actual_node.nested?
+          theme_margin :prose, :bottom, (next_enclosed_block node) unless node.nested?
         when 'qanda'
           @list_numerals << 1
           convert_list node
@@ -2459,6 +2503,7 @@ module Asciidoctor
             %(#{anchor}<a href="#{target}"#{attrs.join}>#{breakable_uri text}</a>)
           # NOTE: @media may not be initialized if method is called before convert phase
           elsif (doc.attr? 'show-link-uri') || (@media != 'screen' && (doc.attr_unspecified? 'show-link-uri'))
+            bare_target = (bare_target.split UriSchemeBoundaryRx, 2)[1] || bare_target if doc.attr? 'hide-uri-scheme'
             # QUESTION: should we insert breakable chars into URI when building fragment instead?
             # TODO: allow style of printed link to be controlled by theme
             %(#{anchor}<a href="#{target}"#{attrs.join}>#{text}</a> [<font size="0.85em">#{breakable_uri bare_target}</font>&#93;)
@@ -2639,7 +2684,11 @@ module Asciidoctor
             img = %([#{node.attr 'alt'}&#93;)
           end
         end
-        (node.attr? 'link') ? %(<a href="#{node.attr 'link'}">#{img}</a>) : img
+        if (node.attr? 'link') && (link = node.attr 'link')
+          link.chr == '#' ? %(<a anchor="#{link.slice 1}">#{img}</a>) : %(<a href="#{link}">#{img}</a>)
+        else
+          img
+        end
       end
 
       def convert_inline_indexterm node
@@ -2655,12 +2704,19 @@ module Asciidoctor
           # NOTE: page number (:page key) is added by InlineDestinationMarker
           dest = { anchor: (anchor_name = @index.next_anchor_name) }
           anchor = %(<a id="#{anchor_name}" type="indexterm"#{visible ? ' visible="true"' : ''}>#{DummyText}</a>)
+          assoc = {}
+          if (see = node.attr 'see')
+            assoc[:see] = parse_text see, inline_format: [normalize: true]
+          end
+          if (see_also = node.attr 'see-also')
+            assoc[:see_also] = see_also.map {|term| parse_text term, inline_format: [normalize: true] }
+          end
           if visible
             visible_term = node.text
-            @index.store_primary_term (FormattedString.new parse_text visible_term, inline_format: [normalize: true]), dest
+            @index.store_term [(parse_text visible_term, inline_format: [normalize: true])], dest, assoc
             %(#{anchor}#{visible_term})
           else
-            @index.store_term (node.attr 'terms').map {|term| FormattedString.new parse_text term, inline_format: [normalize: true] }, dest
+            @index.store_term (node.attr 'terms').map {|term| parse_text term, inline_format: [normalize: true] }, dest, assoc
             anchor
           end
         end
@@ -2831,8 +2887,11 @@ module Asciidoctor
         # FIXME: get sub_attributes to handle drop-line w/o a warning
         doc.set_attr 'attribute-missing', 'skip' unless (attribute_missing = doc.attr 'attribute-missing') == 'skip'
         value = value.gsub '\{', '\\\\\\{' if (escaped_attr_ref = value.include? '\{')
+        value_before_subs = value
         value = (subs = opts[:subs]) ? (doc.apply_subs value, subs) : (doc.apply_subs value)
-        value = (value.split LF).delete_if {|line| SimpleAttributeRefRx.match? line }.join LF if opts[:drop_lines_with_unresolved_attributes] && (value.include? '{')
+        if opts[:drop_lines_with_unresolved_attributes] && (value.include? '{')
+          value = (value.split LF).delete_if {|line| SimpleAttributeRefRx =~ line && (value_before_subs.include? '{' + $1 + '}') }.join LF
+        end
         value = value.gsub '\{', '{' if escaped_attr_ref
         doc.set_attr 'attribute-missing', attribute_missing unless attribute_missing == 'skip'
         page_layout_to_restore ? (doc.set_attr 'page-layout', page_layout_to_restore) : (doc.remove_attr 'page-layout') if page_layout
@@ -4746,7 +4805,12 @@ module Asciidoctor
           image_y = y - image_opts[:vposition]
         end unless (image_y = image_opts[:y])
 
-        link_annotation [image_x, (image_y - image_height), (image_x + image_width), image_y], Border: [0, 0, 0], A: { Type: :Action, S: :URI, URI: uri.as_pdf }
+        loc = [image_x, (image_y - image_height), (image_x + image_width), image_y]
+        if uri.chr == '#'
+          link_annotation loc, Border: [0, 0, 0], Dest: (uri.slice 1)
+        else
+          link_annotation loc, Border: [0, 0, 0], A: { Type: :Action, S: :URI, URI: uri.as_pdf }
+        end
       end
 
       def admonition_icon_data key
@@ -4827,11 +4891,24 @@ module Asciidoctor
         padding = expand_padding_value @theme[%(#{category}_padding)]
         if actual_width > (available_width = bounds.width - padding[3].to_f - padding[1].to_f)
           adjusted_font_size = ((available_width * font_size).to_f / actual_width).truncate 4
-          if (min = @theme[%(#{category}_font_size_min)] || @theme.base_font_size_min) && adjusted_font_size < min
+          if (min = @theme[%(#{category}_font_size_min)] || @theme.base_font_size_min) && adjusted_font_size < (min = resolve_font_size min)
             min
           else
             adjusted_font_size
           end
+        end
+      end
+
+      def resolve_font_size value
+        return value unless ::String === value
+        if value.end_with? 'rem'
+          @root_font_size * value.to_f
+        elsif value.end_with? 'em'
+          font_size * value.to_f
+        elsif value.end_with? '%'
+          font_size * (value.to_f / 100)
+        else
+          value.to_f
         end
       end
 
