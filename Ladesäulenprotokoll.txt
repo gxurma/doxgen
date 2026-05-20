@@ -1,0 +1,169 @@
+Ladesäulen-Protokoll: Messprotokoll 
+===================================
+Martin Gyurkó <info@engyneer.at>
+v1.0, {docdate}: First
+:!toc:
+:toc-title: Inhaltsverzeichnis
+:toclevels: 3
+:icons: font
+:doctype: article
+:chapter-label: Kapitel
+:chapter-refsig: Kapitel
+:section-refsig: Kapitel
+:table-stripes: even
+:table-caption: Tabelle
+:figure-caption: Bild
+:xrefstyle: short
+:imagesdir: Bilder
+
+
+Prüfung von AC-/DC-Ladesäule / Ladepunktsystem
+
+
+Allgemeine Angaben
+------------------
+
+[cols="1,1"]
+|==================
+| Betreiber / Unternehmen 	| Alexander Urban
+| Standort / Adresse 		| Maurach 211d, 6220 Buch in Tirol
+| Bereich / Parkplatz		| Top 16 Parkplatz Wand
+| Ladesäule Nr. / Bezeichung| 1
+| Hersteller				| Tesla
+| Modell / Typ				| Tesla Wall Connector Gen 3
+| Produktnummer				| 1529455-02-D
+| Seriennummer				| PGT21109005449 
+|==================
+
+
+Technische Daten der Ladesäule
+------------------------------
+
+[cols="1,1"]
+|==================
+| Säulentyp					| [*] AC    [ ] DC    [ ]AC/DC	
+| Anzahl Ladepunkte			| 1
+| Stecksystem(e)			| [*] Typ 2   [ ] CCS   [ ] CHAdeMO	
+| Ausgangsleistung			| 11 kVA
+| Netzform					| [*] TN   [ ] TT [ ] IT
+| Bemessungsspannung		| 3-Phasig 400Vac L-L
+| Bemessungsstrom			| 16
+| Schutzart (IP)			| IP55
+| RCD / Schutzkonzept		| Integriert (Typ A + DC 6 mA)
+| Zuleitung abgesichert mit | Typ B
+|==================
+
+
+Prüfgrundlagen
+--------------
+
+
+Zugrunde gelegte Regelwerke / Vorgaben: 
+
+* [*] ÖVE E 8101 
+* [ ] BetrSichV    
+* [ ] TRBS 1201    
+* [ ] TRBS 1203    
+* [ ] DGUV Vorschrift 3    
+* [ ] DIN VDE 0105-100    
+* [*] DIN VDE 0100-722    
+* [ ] DIN EN IEC 61851    
+* [*] Herstellerangaben
+
+
+Sichtprüfung
+------------
+
+[cols="5,1,1,2"]
+|==================
+| Prüfpunkt												| i. O.	| n. i. O.	| Bemerkungen
+| Gehäuse / Säulenkörper unbeschädigt					| [*]	| [ ]		|
+| Kennzeichnungen / Typenschild lesbar					| [*]	| [ ]		|
+| Fundament / Befestigung / Standsicherheit 			| [*]	| [ ]		| 
+| Anfahrschutz / Umgebung ordnungsgemäß					| [*]	| [ ]		|
+| Anschlussraum sauber, keine losen Teile				| [*]	| [ ]		|
+| Leitungsführung / Kabelmanagement 					| [*]	| [ ]		|
+| Steckdosen / Kupplungen / Verriegelung optisch 		| [*]	| [ ]		|
+| Display / Bedienelemente / Not-Aus 					| [*]	| [ ]		|
+| Anzeichen thermischer Überlastung / Verfärbungen 		| [*]	| [ ]		|
+|==================
+
+Messungen
+---------
+
+[cols="3,2,1,1,1,1"]
+|==================
+| Messgröße								|	Soll / Grenzwert					|	Messwert	|	 Ergebnis 	|	Ergebnis	|  Bemerkungen
+| Spannung L-N / L-L / DC				|	nach Netzsystem						| 	238V L-N	| [*] i. O.		| [ ] n. i. O.	|
+| Schutzleiterwiderstand				|   nach Leitungslänge / Anlagenteil	|	0,39Ω /592A | [*] i. O.		| [ ] n. i. O.	|
+| Isolationswiderstand					|	Um = 525V							|	>999MΩ		| [*] i. O.		| [ ] n. i. O.	|
+| Schleifenimpedanz / Netzimpedanz (AC)	|	Lim = 80A							|	0,39Ω /588A	| [*] i. O.		| [ ] n. i. O.	|
+| RCD-Auslösestrom / Fehlerstromschutz	|										|				| [ ] i. O.		| [ ] n. i. O.	| n. A.
+| RCD-Auslösezeit / Abschaltzeit		|										|				| [ ] i. O.		| [ ] n. i. O.	| n. A.
+| Kommunikations- / Freigabesignal		|	funktionsgerecht					|				| [*] i. O.		| [ ] n. i. O.	|
+|==================
+
+RCD ist in der Box, Verhalten nicht testbar.
+
+
+Erproben / Funktionsprüfung
+---------------------------
+
+
+[cols="4,1,1,2"]
+|==================
+| Prüfpunkt																	|i. O.	|n. i. O.|	Bemerkungen
+| Freigabe / Authentifizierung funktionsfähig								| [*]	| [ ]		|
+| Ladestart / Ladestopp funktionsfähig										| [*]	| [ ]		|
+| Verriegelung / Entriegelung funktionsfähig								| [*]	| [ ]		|
+| Melde- / Anzeigeelemente funktionsfähig									| [*]	| [ ]		|
+| Not-Aus / Schutzabschaltung wirksam										| [*]	| [ ]		|
+| Optional: Lastmanagement / Backend / Kommunikationsschnittstelle geprüft	| [*]	| [ ]		|
+|==================
+
+
+Festgestellte Mängel / Maßnahmen
+--------------------------------
+
+[cols="1,4,2"]
+|==================
+|Nr.|	Mangel / Abweichung	| Maßnahme / Frist
+| 1	|______________________________________________________________	|________________________________________________
+| 2	|______________________________________________________________	|________________________________________________
+| 3	|______________________________________________________________	|________________________________________________
+|==================
+
+
+
+Gesamtbewertung
+---------------
+
+Ergebnis	
+
+* [*] Bestanden / i. O.
+* [ ] mit Mängeln – eingeschränkt verwendbar
+* [ ] nicht bestanden / außer Betrieb nehmen
+
+Empfehlung
+
+-
+
+Nächste Pfüffrist
+
+-
+
+
+Prüferangaben / Unterschriften
+------------------------------
+
+[cols="1,1"]
+|==================
+| Prüfer / befähigte Person			|		Martin Gyurkó 
+| Firma								| 		enGYneer (Martin Gyurkó)
+| Messgerät / Typ					| 		Bening IT 115
+| Kalibrierung bis					| 		2029
+| Ort / Datum						|		Buch in Tirol, 18.5.2026
+| Unterschrift						|		
+|==================
+
+
