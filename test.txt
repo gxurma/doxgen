@@ -93,3 +93,35 @@ NOTE: Itt ez egy <==> veszély
 *** yxccsws ccc sc 
 *** yxccccccsws ccc sc 
 * íyxc
+
+
+image::GE-logo.png[title=" awerhah "]
+
+
+Barcodes can be written codabar:A31117013206375A[png, height=10] inline or as blocks.
+
+[qrcode, format="png", xdim=4]
+....
+Hello World!
+....
+
+[ditaa]
+....
+                   +-------------+
+                   | Asciidoctor |-------+
+                   |   diagram   |       |
+                   +-------------+       | PNG out
+                       ^                 |
+                       | ditaa in        |
+                       |                 v
+ +--------+   +--------+----+    /---------------\
+ |        | --+ Asciidoctor +--> |               |
+ |  Text  |   +-------------+    |   Beautiful   |
+ |Document|   |   !magic!   |    |    Output     |
+ |     {d}|   |             |    |               |
+ +---+----+   +-------------+    \---------------/
+     :                                   ^
+     |          Lots of work             |
+     +-----------------------------------+
+....
+
